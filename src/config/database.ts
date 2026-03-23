@@ -7,7 +7,8 @@ export const connectDatabase = async (): Promise<void> => {
   try {
     mongoose.set('strictQuery', true);
 
-    const conn = await mongoose.connect(`${config.mongo.uri}/${DB_NAME}`, {
+    const conn = await mongoose.connect(config.mongo.uri, {
+      dbName: DB_NAME,
       maxPoolSize: 10,
       minPoolSize: 2,
       serverSelectionTimeoutMS: 5000,
