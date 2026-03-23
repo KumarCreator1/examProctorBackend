@@ -24,7 +24,7 @@ const envSchema = z.object({
   JWT_REFRESH_EXPIRY: z.string().default('7d'),
 
   // CORS
-  CORS_ORIGIN: z.string().default('http://localhost:3000,https://v0-frontend-for-backend.onrender.com'),
+  CORS_ORIGIN: z.string().default('http://localhost:3000,https://v0-frontend-for-backend.onrender.com,https://examproctorbackend.onrender.com'),
 
   // Rate Limiting
   RATE_LIMIT_WINDOW_MS: z.coerce.number().default(900000), // 15 minutes
